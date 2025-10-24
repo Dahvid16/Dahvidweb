@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Custom globals */
+html, body, #root {
+	height: 100%;
+}
+
+.h-svh {
+	/* fallback for small view height handling */
+	height: 100vh;
+}
