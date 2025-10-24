@@ -58,34 +58,34 @@ const NavBar = () => {
                     {item.name}
                 </NavLink>
             ))}
-            <div className="w-full h-1 bg-gray-400"></div>
-                <div className="flex flex-row justify-start items-center text-center gap-4">
-                  <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-                    <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
-                      <FaEnvelope className='text-xl text-gray-800' />
-                    </a>
-                  </div>
-                  <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-                    <a href="www.instagram.com/dahvidweb" target="_blank" rel="noreferrer">
-                      <FaInstagram className='text-xl text-gray-800' />
-                    </a>
-                  </div>
-                  <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-                    <a href="https://www.linkedin.com/in/davidakpom" target="_blank" rel="noreferrer">
-                      <FaLinkedin className='text-xl text-gray-800' />
-                    </a>
-                  </div>
-                  <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-                    <a href="https://github.com/Dahvid16" target="_blank" rel="noreferrer">
-                      <FaGithub className='text-xl text-gray-800' />
-                    </a>
-                  </div>
-                  <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-                    <a href="https://x.com/dahv_id16.com" target="_blank" rel="noreferrer">
-                      <FaXTwitter className='text-xl text-gray-800' />
-                    </a>
-                  </div>
-                </div>
+            <div className="w-full h-[2px] bg-gray-400"></div>
+            <div className="flex flex-row justify-start items-center text-center gap-4">
+              <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
+                    <FaEnvelope className='text-xl text-gray-800' />
+                </a>
+            </div>
+            <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <a href="www.instagram.com/dahvidweb" target="_blank" rel="noreferrer">
+                    <FaInstagram className='text-xl text-gray-800' />
+                </a>
+            </div>
+            <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <a href="https://www.linkedin.com/in/davidakpom" target="_blank" rel="noreferrer">
+                    <FaLinkedin className='text-xl text-gray-800' />
+                </a>
+            </div>
+            <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <a href="https://github.com/Dahvid16" target="_blank" rel="noreferrer">
+                    <FaGithub className='text-xl text-gray-800' />
+                </a>
+            </div>
+            <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <a href="https://x.com/dahv_id16.com" target="_blank" rel="noreferrer">
+                    <FaXTwitter className='text-xl text-gray-800' />
+                </a>
+            </div>
+            </div>
         </motion.ul>
         </>
         )}

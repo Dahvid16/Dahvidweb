@@ -9,8 +9,8 @@ const NotFound = () => {
         <FaExclamationTriangle className='text-[7rem] text-emerald-700 mb-5' />
         <h1 className='text-4xl font-extrabold text-gray-900 mb-4'>Not Found</h1>
         <p className='text-gray-900'>Sorry, this page is does not exist at this moment.</p>
-        <Link to='/contact' className='bg-gray-500 px-5 py-2 rounded-2xl text-white/90 font-semibold mt-5 cursor-pointer'>
-          Contact Us
+        <Link to='/' className='bg-gray-500 px-5 py-2 rounded-2xl text-white/90 font-semibold mt-5 cursor-pointer'>
+          Go Back
         </Link>
       </div>
     </section>

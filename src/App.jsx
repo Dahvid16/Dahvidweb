@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ComingSoon from './Pages/ComingSoon'
 import NotFound from './Pages/NotFound'
-import MainLayout from './Pages/Layout/MainLayout'
+import MainLayout from './Layout/MainLayout'
 
 const App = () => {
   return (
