@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ComingSoon from './Pages/ComingSoon'
 import NotFound from './Pages/NotFound'
 import MainLayout from './Layout/MainLayout'
+import Contact from './Components/Contact'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />} >
           <Route index element={<ComingSoon />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

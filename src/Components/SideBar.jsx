@@ -19,7 +19,7 @@ const SideBar = () => {
   // const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className='hidden bg-linear-to-r from-emerald-200 to-emerald-100 lg:flex text-center px-6 py-8 my-4 ml-4'>
+    <nav className='hidden bg-linear-to-r from-emerald-200 to-emerald-100 md:flex text-center px-6 py-8 my-4 ml-4'>
       <div className='flex flex-col gap-5'>
         <picture className='bg-gray-300/60 h-25 w-25 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
           <img src={Logo} alt="Dahvidweb Logo" />
@@ -35,7 +35,7 @@ const SideBar = () => {
                 <NavLink
                 key={item.name}
                 to={item.path}
-                className={({isActive}) => `flex items-center gap-3 w-full px-3 py-2 text-lg rounded font-medium ${isActive ? 'bg-emerald-700/25 text-white' : 'text-gray-800'}`}>
+                className={({isActive}) => `flex items-center gap-3 w-full px-3 py-2 text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/25 text-white' : 'text-gray-800'}`}>
                   <span className='text-lg'>{item.icon}</span>
                   {item.name}
                 </NavLink>
