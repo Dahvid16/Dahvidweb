@@ -5,10 +5,12 @@ import NavBar from '../Components/NavBar'
 
 const MainLayout = () => {
   return (
-    <div className='flex flex-col md:flex-row w-full h-svh lg:gap-3 lg:space-x-2'>
+    <div className='flex flex-col md:flex-row min-h-screen w-full relative md:space-x-4'>
       <NavBar />
       <SideBar />
-      <Outlet />
+      <main className="flex-1 overflow-y-auto min-h-screen p-5 bg-gray-100/50">
+        <Outlet />
+      </main>
     </div>
   )
 }

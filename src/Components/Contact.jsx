@@ -1,38 +1,15 @@
-import React from 'react'
 import { useState } from 'react';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { FaCheckCircle, FaClock, FaEnvelope, FaMapPin, FaPhone, FaSalesforce } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin,FaRegPaperPlane, FaXTwitter } from 'react-icons/fa6';
+// import { toast } from 'sonner';
+import PageTransition from '../PageTransition';
+import { FaCheckCircle } from 'react-icons/fa';
+import SEO from '../SEO';
 
 const Contact = () => {
 
-  useEffect(() => {
-    if (window.location.hash === '#form') {
-      const el = document.getElementById('form');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, []);
-
-  const location = useLocation();
-  const selectedService = location.state?.service;
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: selectedService || '',
-    message: ''
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,195 +25,124 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
-        subject: '',
+        service: '',
         message: ''
       });
     }, 1500);
   };
 
-  const contactInfo = [
-    {
-      icon: FaPhone,
-      title: 'Phone',
-      details: ['+234 816 201 6410', '+234 807 576 3840'],
-      description: 'Call us during business hours for immediate assistance'
-    },
-    {
-      icon: FaEnvelope,
-      title: 'Email',
-      details: [`kennethakpom.associates\n@gmail.com`, 'consultation@ka.associates.ng'],
-      description: 'Send us an email and we\'ll respond within 24 hours'
-    },
-    {
-      icon: FaMapPin,
-      title: 'Office Address',
-      details: ['Suite 7, Ikotun-Ijegun Road, Ikotun', 'Lagos State, Nigeria'],
-      description: 'Visit our office for in-person consultations'
-    },
-    {
-      icon: FaClock,
-      title: 'Business Hours',
-      details: [`Monday - Friday: 9:00 AM - 5:00 PM [GMT+1]`, `Saturday: 10:00 AM - 4:00 PM [GMT+1]`],
-      description: '24/7 emergency legal support available'
-    }
-  ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const practiceAreas = [
-    'Corporate Law',
-    'Real Estate Law',
-    'Family Law',
-    'Employment Law',
-    'Civil Litigation',
-    'Intellectual Property',
-    'Criminal Defense',
-    'Legal Documentation',
-    'Other'
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const socialLinks = [
+    { href: 'https://github.com/Dahvid16', icon: FaGithub, label: 'GitHub' },
+    { href: 'https://www.linkedin.com/in/davidakpom', icon: FaLinkedin, label: 'LinkedIn' },
+    { href: 'https://instagram.com/dahvidweb', icon: FaInstagram, label: 'Instagram' },
+    { href: 'https://x.com/dahv_id16', icon: FaXTwitter, label: 'X' },
   ];
 
   return (
-    
-    <section>
-      <div>
-        <h1>Let's Work together</h1>
-        <p>Have a Project idea? Get in touch</p>
-      </div>
-      <div>
-        <h3>Get in Touch</h3>
-      </div>
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="hero-bg section-padding text-primary-foreground">
-        <div className='after-bg'></div>
-        <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h1 className="text-display mb-6">
-              Contact <span className="text-gradient-gold">Us</span>
+    <PageTransition>
+      <SEO 
+        title="Contact David Akpom – Let's Build Something Great | Dahvidweb"
+        description="Reach out to Dahvidweb to discuss your website or frontend project. Let's create fast, modern, and conversion-ready web experiences."
+        keywords="contact frontend developer, hire React developer, web developer for business, website design collaboration"
+      />
+      
+      <div className="min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-5xl">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-16 text-center"
+          >
+            <h1 className="flex items-center justify-center text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 gap-4">
+              Let's{' '}
+              <span className="bg-emerald-300 bg-clip-text text-transparent">
+                Connect
+              </span>
+              {' '}
+              <span className='text-3xl'>👋</span>
             </h1>
-            <p className="text-lg text-white/90 max-w-2xl mx-auto">
-              Have a legal question or need guidance? Reach out today for clear, professional advice and dedicated representation tailored to your needs.
+            <p className="text-xl max-w-3xl mx-auto">
+              Have a project or idea in mind? I'm open to freelance work, collaborations, 
+              and full-time opportunities.
             </p>
-          </div>
-        </div>
-      </section>
+          </motion.div>
 
-      {/* Contact Information */}
-      <section className="py-16 md:py-20 bg-gray-light">
-        <div className="container-custom flex items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-[90%] md:w-full">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="card-elegant flex flex-col items-center justify-center text-wrap text-center hover-lift">
-                <info.icon className="h-12 w-12 text-gold mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-3">{info.title}</h3>
-                <div className="space-y-1 mb-3">
-                  {info.details.map((detail, detailIndex) => (
-                    <p key={detailIndex} className="text-center text-foreground font-medium md:text-[0.9rem]">
-                      {detail}
-                    </p>
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm">{info.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form and Map */}
-      <section className="py-16 md:py-20 md:px-0 px-1 section-padd" id="form">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div>
-              <h2 className="text-heading mb-6">Send Us a Message</h2>
-              
-              {isSubmitted ? (
-                <div className="card-elegant text-center bg-green-50 border-green-200">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <div className="border border-border rounded-2xl p-8">
+                <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
+                
+                {isSubmitted ? (
+                <div className="text-center bg-green-50 border-green-200">
                   <FaCheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-green-800 mb-2">
+                  <h3 className="text-xl font-semibold mb-2">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-green-700 mb-4">
-                    Thank you for contacting us. We'll get back to you within 24 hours.
+                  <p className="mb-8">
+                    Thank you for contacting us. We'll get back to you as soon as possible.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    className="btn-primary"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-emerald-600/55 text-white rounded-xl font-semibold shadow-emerald-lg hover:shadow-emerald transition-all duration-300 glow-hover text-[1.1rem] cursor-pointer"
                   >
                     Send Another Message
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="form-input"
-                        required
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="form-input"
-                        required
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 placeholder:text-gray-800/60 placeholder:italic"
+                      placeholder="Phil Moore"
+                    />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="form-input"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                        Legal Matter *
-                      </label>
-                      <select
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="form-input"
-                        required
-                      >
-                        <option value="">Select a practice area</option>
-                        {practiceAreas.map((area) => (
-                          <option key={area} value={area}>{area}</option>
-                        ))}
-                      </select>
-                    </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 placeholder:text-gray-800/60 placeholder:italic"
+                      placeholder="phil@example.com"
+                    />
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message *
+                      Your Message
                     </label>
                     <textarea
                       id="message"
@@ -244,19 +150,15 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="form-textarea"
-                      placeholder="Please describe your legal matter in detail..."
-                      required
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 resize-none placeholder:text-gray-800/60 placeholder:italic"
+                      placeholder="Tell us about your project..."
                     />
                   </div>
-                  <p className="text-caption text-muted-foreground">
-                    * Required fields. Your information is kept confidential and secure.
-                  </p>
 
                   <button
                     type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-emerald-600/55 text-white rounded-xl font-semibold shadow-emerald-lg hover:shadow-emerald transition-all duration-300 glow-hover text-[1.1rem] cursor-pointer"
                     disabled={isSubmitting}
-                    className="btn-primary w-full flex items-center justify-center space-x-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -265,66 +167,74 @@ const Contact = () => {
                       </>
                     ) : (
                       <>
-                        <FaSalesforce className="h-4 w-4" />
+                        <FaRegPaperPlane className="h-4 w-4" />
                         <span>Send Message</span>
                       </>
                     )}
                   </button>
                 </form>
-              )}
-            </div>
-
-            {/* Map and Additional Info */}
-            <div className="space-y-8">
-              {/* Office Location */}
-              <div>
-                <h3 className="text-subheading mb-4">Our Location</h3>
-                <div className="card-elegant">
-                  <div className="aspect-video bg-gray-medium rounded-lg mb-4 flex items-center justify-center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63420.48769210025!2d3.2025128095414317!3d6.549377344841366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b85422f38ae75%3A0x214e1e7d2b0ee983!2sIkotun%2C%20Lagos%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1759296284816!5m2!1sen!2sng" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="h-full w-full text-muted-foreground"></iframe>
-                  </div>
-                  <h4 className="font-semibold mb-2">Kenneth Akpom & Associates Office</h4>
-                  <p className="text-muted-foreground mb-2">
-                    Suite 7, Ikotun-Ijegun Road, Ikotun<br />
-                    Lagos State, Nigeria
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Located in the heart of Lagos business district, easily accessible by public transport.
-                  </p>
-                </div>
+                )}
               </div>
+            </motion.div>
 
-            </div>
-              {/* Emergency Contact */}
-              <div className="card-elegant bg-primary text-primary-foreground mx-auto w-[95%] md:w-full">
-                <h4 className="text-lg font-semibold mb-3">Emergency Legal Support</h4>
-                <p className="mb-4 text-white/90">
-                  Need urgent legal assistance? Our emergency hotline is available 24/7 
-                  for critical legal matters.
-                </p>
-                <a 
-                  href="tel:+2348031234567"
-                  className="btn-gold"
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="space-y-8"
+            >
+              {/* Email */}
+              <div className="border border-border rounded-2xl p-8">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4">
+                  <FaEnvelope className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Send us an email</h3>
+                <a
+                  href="mailto:dahvidweb@gmail.com"
+                  className="hover:text-accent transition-colors duration-300 text-lg"
                 >
-                  Call Emergency Line
+                  dahvidweb@gmail.com
                 </a>
               </div>
 
-              {/* Consultation Info */}
-              <div className="card-elegant mx-auto w-[95%] md:w-full">
-                <h4 className="text-lg font-semibold mb-3">Free Consultation</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Initial 30-minute consultation is free</li>
-                  <li>• Case evaluation and legal advice</li>
-                  <li>• No obligation to proceed</li>
-                  <li>• Confidential and professional</li>
-                </ul>
+              {/* Social Links */}
+              <div className="bg-card border border-border rounded-2xl p-8">
+                <h3 className="text-xl font-bold mb-4">Connect on Social</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {socialLinks.map((social) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={social.label}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
+                      >
+                        <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <span className="font-medium text-sm">{social.label}</span>
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
+
+              <div className="bg-gradient-glow border border-primary/20 rounded-2xl p-8">
+                <h3 className="text-xl font-bold mb-4">Current Availability</h3>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-3 h-3 rounded-full bg-emerald-600 animate-pulse" />
+                  <span className="text-muted-foreground">Available for projects</span>
+                </div>
+                <p className="text-muted-foreground">
+                  We typically respond within 24 hours. Looking forward to hearing about 
+                  your project!
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </section>
-    </div>
-    </section>
+      </div>
+    </PageTransition>
   )
 }
 

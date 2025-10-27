@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainLayout />} >
           <Route index element={<ComingSoon />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

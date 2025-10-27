@@ -16,12 +16,20 @@ const SideBar = () => {
     { name: 'Contact', path: '/contact', icon: <FaPhone/> }
   ];
 
+  const socialLinks = [
+    { href: 'https://github.com/Dahvid16', icon: FaGithub, label: 'GitHub' },
+    { href: 'https://www.linkedin.com/in/davidakpom', icon: FaLinkedin, label: 'LinkedIn' },
+    { href: 'https://instagram.com/dahvidweb', icon: FaInstagram, label: 'Instagram' },
+    { href: 'https://x.com/dahv_id16', icon: FaXTwitter, label: 'X' },
+    { href: 'mailto:dahvidweb@gmail.com', icon: FaEnvelope, label: 'Email' },
+  ];
+
   // const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className='hidden bg-linear-to-r from-emerald-200 to-emerald-100 md:flex text-center px-6 py-8 my-4 ml-4'>
+    <nav className='hidden md:flex flex-col bg-linear-to-r from-emerald-200 to-emerald-100 sticky top-0 px-6 py-8 overflow-y-auto text-center m-2 h-screen'>
       <div className='flex flex-col gap-5'>
-        <picture className='bg-gray-300/60 h-25 w-25 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
+        <picture className='bg-gray-300/60 h-20 w-20 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
           <img src={Logo} alt="Dahvidweb Logo" />
         </picture>
         <div>
@@ -42,33 +50,25 @@ const SideBar = () => {
               ))}
           </ul>
         </div>
-        <div className="w-full h-1 bg-gray-400"></div>
-        <div className="flex flex-row justify-start items-center text-center gap-4">
-          <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-            <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
-              <FaEnvelope className='text-xl text-gray-800' />
-            </a>
+        <div className="w-full h-1 bg-gray-400 mt-6"></div>
+        <div className="flex flex-row justify-start items-center text-center gap-3">
+            {socialLinks.map((social) => {
+            const Icon = social.icon;
+            return (
+              <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg bg-sidebar-accent flex items-center justify-center glow-hover"
+                aria-label={social.label}
+              >
+                <Icon className="w-5 h-5" />
+              </a>
           </div>
-          <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-            <a href="www.instagram.com/dahvidweb" target="_blank" rel="noreferrer">
-              <FaInstagram className='text-xl text-gray-800' />
-            </a>
-          </div>
-          <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-            <a href="https://www.linkedin.com/in/davidakpom" target="_blank" rel="noreferrer">
-              <FaLinkedin className='text-xl text-gray-800' />
-            </a>
-          </div>
-          <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-            <a href="https://github.com/Dahvid16" target="_blank" rel="noreferrer">
-              <FaGithub className='text-xl text-gray-800' />
-            </a>
-          </div>
-          <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
-            <a href="https://x.com/dahv_id16.com" target="_blank" rel="noreferrer">
-              <FaXTwitter className='text-xl text-gray-800' />
-            </a>
-          </div>
+            );
+          })}
         </div>
       </div>
     </nav>
