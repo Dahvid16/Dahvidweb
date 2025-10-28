@@ -23,7 +23,7 @@ const NavBar = () => {
       ];
 
   return (
-    <nav className='md:hidden flex flex-row bg-linear-to-r from-emerald-200 to-emerald-100 justify-between px-6 py-5 shadow-md items-center z-50 sticky top-0'>
+    <nav className='md:hidden flex flex-row bg-linear-to-r from-emerald-200 to-emerald-100 justify-between px-6 py-4 shadow-md items-center z-50 sticky top-0'>
         <h1 className='text-[2rem] font-bold'>Dahvidweb</h1>
         <div className="text-2xl font-bold cursor-pointer" onClick={open}>
             {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -31,7 +31,7 @@ const NavBar = () => {
         <AnimatePresence>
         {isMenuOpen && (
         <>
-        <motion.ul className='absolute top-17 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[50%] items-center pt-3 pb-5 px-4 shadow-md'
+        <motion.ul className='absolute top-21 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[50%] items-center h-screen pt-3 pb-5 px-4 shadow-md'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
