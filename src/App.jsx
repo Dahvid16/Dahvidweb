@@ -4,13 +4,14 @@ import ComingSoon from './Pages/ComingSoon'
 import NotFound from './Pages/NotFound'
 import MainLayout from './Layout/MainLayout'
 import Contact from './Components/Contact'
+import HomePage from './Pages/HomePage'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainLayout />} >
-          <Route index element={<ComingSoon />} />
+          <Route index element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -1,8 +1,15 @@
 import React from 'react'
+import PageTransition from '../PageTransition'
+import SEO from '../SEO'
+import HomeHeroSection from '../Components/Home Page/HomeHeroSection'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <PageTransition>
+      <SEO />
+
+      <HomeHeroSection />
+    </PageTransition>
   )
 }
 

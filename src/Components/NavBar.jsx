@@ -23,9 +23,9 @@ const NavBar = () => {
       ];
 
   return (
-    <nav className='md:hidden flex flex-row bg-linear-to-r from-emerald-200 to-emerald-100 justify-between px-6 py-3 shadow-md items-center'>
-        <h1 className='text-[1.8rem] font-bold'>Dahvidweb</h1>
-        <div className="text-xl font-bold cursor-pointer" onClick={open}>
+    <nav className='md:hidden flex flex-row bg-linear-to-r from-emerald-200 to-emerald-100 justify-between px-6 py-5 shadow-md items-center z-50 sticky top-0'>
+        <h1 className='text-[2rem] font-bold'>Dahvidweb</h1>
+        <div className="text-2xl font-bold cursor-pointer" onClick={open}>
             {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <AnimatePresence>
