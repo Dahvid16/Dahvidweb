@@ -31,7 +31,7 @@ const NavBar = () => {
         <AnimatePresence>
         {isMenuOpen && (
         <>
-        <motion.ul className='absolute top-21 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[50%] items-center h-screen pt-3 pb-5 px-4 shadow-md'
+        <motion.ul className='absolute top-21 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[55%] items-center h-screen pt-3 pb-5 px-4 shadow-md'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -60,28 +60,28 @@ const NavBar = () => {
                     </NavLink>
                 ))}
                 <div className="w-full h-[2px] bg-gray-400"></div>
-                <div className="flex flex-row justify-start items-center text-center gap-2">
-                <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <div className="flex flex-row justify-start items-center text-center gap-3">
+                <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
                         <FaEnvelope className='text-lg text-gray-800' />
                     </a>
                 </div>
-                <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="www.instagram.com/dahvidweb" target="_blank" rel="noreferrer">
                         <FaInstagram className='text-lg text-gray-800' />
                     </a>
                 </div>
-                <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="https://www.linkedin.com/in/davidakpom" target="_blank" rel="noreferrer">
                         <FaLinkedin className='text-lg text-gray-800' />
                     </a>
                 </div>
-                <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="https://github.com/Dahvid16" target="_blank" rel="noreferrer">
                         <FaGithub className='text-lg text-gray-800' />
                     </a>
                 </div>
-                <div className='bg-gray-300/60 p-[0.4rem] rounded-lg cursor-pointer shadow-md'>
+                <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="https://x.com/dahv_id16.com" target="_blank" rel="noreferrer">
                         <FaXTwitter className='text-lg text-gray-800' />
                     </a>
