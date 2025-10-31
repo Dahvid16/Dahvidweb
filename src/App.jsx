@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ComingSoon from './Pages/ComingSoon'
 import NotFound from './Pages/NotFound'
 import MainLayout from './Layout/MainLayout'
-import Contact from './Components/Contact'
+import Contact from './Pages/Contact'
 import HomePage from './Pages/HomePage'
 
 const App = () => {

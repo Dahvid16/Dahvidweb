@@ -23,15 +23,15 @@ const NavBar = () => {
       ];
 
   return (
-    <nav className='md:hidden flex flex-row bg-linear-to-r from-emerald-200 to-emerald-100 justify-between px-6 py-4 shadow-md items-center z-50 sticky top-0'>
+    <nav className='md:hidden flex flex-row glassy justify-between px-6 py-4 shadow-md items-center z-50 sticky top-2 w-[95%] rounded-4xl m-auto'>
         <h1 className='text-[2rem] font-bold'>Dahvidweb</h1>
-        <div className="text-2xl font-bold cursor-pointer" onClick={open}>
+        <div className="text-2xl cursor-pointer" onClick={open}>
             {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <AnimatePresence>
         {isMenuOpen && (
         <>
-        <motion.ul className='absolute top-21 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[55%] items-center h-screen pt-3 pb-5 px-4 shadow-md'
+        <motion.ul className='absolute top-22 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[55%] items-center h-[90svh] pt-3 pb-5 px-4 shadow-md rounded-tl-4xl'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -60,7 +60,7 @@ const NavBar = () => {
                     </NavLink>
                 ))}
                 <div className="w-full h-[2px] bg-gray-400"></div>
-                <div className="flex flex-row justify-start items-center text-center gap-2">
+                <div className="flex flex-row justify-center items-center text-center gap-2 flex-wrap">
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
                         <FaEnvelope className='text-lg text-gray-800' />

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin,FaRegPaperPlane, FaXTwitter } from 'react-icons/fa6';
 // import { toast } from 'sonner';
 import PageTransition from '../PageTransition';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaLinkedinIn } from 'react-icons/fa';
 import SEO from '../SEO';
 
 const Contact = () => {
@@ -46,7 +46,7 @@ const Contact = () => {
 
   const socialLinks = [
     { href: 'https://github.com/Dahvid16', icon: FaGithub, label: 'GitHub' },
-    { href: 'https://www.linkedin.com/in/davidakpom', icon: FaLinkedin, label: 'LinkedIn' },
+    { href: 'https://www.linkedin.com/in/davidakpom', icon: FaLinkedinIn, label: 'LinkedIn' },
     { href: 'https://instagram.com/dahvidweb', icon: FaInstagram, label: 'Instagram' },
     { href: 'https://x.com/dahv_id16', icon: FaXTwitter, label: 'X' },
   ];

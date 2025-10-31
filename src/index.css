@@ -104,3 +104,10 @@ html, body, #root {
 	/* fallback for small view height handling */
 	height: 100vh;
 }
+
+.glassy {
+    background: linear-gradient(to right, rgba(164, 244, 207, 0.6), rgba(208, 250, 229, 0.8));
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}

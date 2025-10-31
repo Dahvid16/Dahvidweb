@@ -14,7 +14,7 @@ const Footer = () => {
     ];
 
   return (
-    <footer className="block bg-linear-to-r from-emerald-200 to-emerald-100 text-primary-foreground px-5 py-16 md:py-20 md:hidden text-gray-800" style={{borderRadius: "50px 50px 0 0"}}>
+    <footer className="block glassy text-primary-foreground px-5 py-16 md:py-20 md:hidden text-gray-800" style={{borderRadius: "50px 50px 0 0"}}>
       <div className="container-custom">
 
           {/* Contact Information & Links */}

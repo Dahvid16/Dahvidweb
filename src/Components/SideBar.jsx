@@ -27,7 +27,7 @@ const SideBar = () => {
   // const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className='hidden md:flex flex-col bg-linear-to-r from-emerald-200 to-emerald-100 sticky top-0 px-6 py-8 overflow-y-auto text-center m-2 h-screen'>
+    <nav className='hidden md:flex flex-col glassy sticky top-0 px-6 py-8 overflow-y-auto text-center m-2 h-screen'>
       <div className='flex flex-col gap-5'>
         <picture className='bg-gray-300/60 h-20 w-20 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
           <img src={Logo} alt="Dahvidweb Logo" />
