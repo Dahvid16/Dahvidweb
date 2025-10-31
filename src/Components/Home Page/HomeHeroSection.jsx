@@ -1,12 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
 
 const HomeHeroSection = () => {
     return (
   <section 
-      className="min-h-[80svh] flex items-center justify-center relative overflow-hidden"
+      className="md:min-h-[90svh] min-h-[80svh] flex items-center justify-center relative overflow-hidden"
     > 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 relative z-10">
           <motion.div
@@ -26,7 +26,7 @@ const HomeHeroSection = () => {
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
               Hi, I'm{' '}
-              <span className="bg-emerald-300 bg-clip-text text-transparent">
+              <span className="bg-emerald-400/60 bg-clip-text text-transparent">
                 David Akpom
               </span>
             </h1>

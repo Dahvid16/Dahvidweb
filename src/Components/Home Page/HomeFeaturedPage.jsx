@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaArrowRight, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 
 const HomeFeaturedPage = () => {
       const featuredProjects = [
@@ -43,7 +43,7 @@ const HomeFeaturedPage = () => {
           >
             <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Featured{' '}
-              <span className="bg-emerald-300 bg-clip-text text-transparent">
+              <span className="bg-emerald-400/60 bg-clip-text text-transparent">
                 Projects
               </span>
             </h2>
@@ -100,14 +100,14 @@ const HomeFeaturedPage = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mt-10"
+            className="text-center mt-8"
           >
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 font-semibold"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-primary-foreground rounded-2xl font-semibold shadow-emerald hover:shadow-emerald-lg transition-all duration-300 glow-hover"
             >
               View All Projects
-              <FaArrowRight className="w-5 h-5" />
+              <FaArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>

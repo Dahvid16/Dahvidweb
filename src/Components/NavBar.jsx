@@ -54,7 +54,7 @@ const NavBar = () => {
                     <NavLink
                     key={item.name}
                     to={item.path}
-                    className={({isActive}) => `flex items-center justify-center gap-3 px-3 py-2 w-full text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/25 text-white' : 'text-gray-800'}`}
+                    className={({isActive}) => `flex items-center justify-center gap-3 px-3 py-2 w-full text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/35 text-white' : 'text-gray-800'}`}
                     onClick={open}>
                         {item.name}
                     </NavLink>

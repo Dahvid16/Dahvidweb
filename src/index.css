@@ -32,7 +32,7 @@
 
     --radius: 1rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 100% 50%));
+    --gradient-primary: linear-gradient(135deg, rgba(6, 160, 119, 0.45), rgba(16, 185, 129, 0.45));
     --gradient-glow: linear-gradient(135deg, hsl(160 84% 39% / 0.2), hsl(160 100% 50% / 0.2));
     --shadow-emerald: 0 10px 40px -10px hsl(160 84% 39% / 0.4);
     --shadow-emerald-lg: 0 20px 60px -15px hsl(160 84% 39% / 0.5);
@@ -66,7 +66,7 @@
 
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 100% 50%));
+    background: linear-gradient(135deg, rgba(6, 160, 119, 0.55), rgba(16, 185, 129, 0.55));
   }
 
   .primary-foreground {
