@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin,FaRegPaperPlane, FaXTwitter } from 'react-icons/fa6';
 // import { toast } from 'sonner';
 import PageTransition from '../PageTransition';
@@ -209,7 +209,7 @@ const Contact = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
+                        className="flex items-center gap-2 px-3 py-3 bg-background border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
                       >
                         <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                         <span className="font-medium text-sm">{social.label}</span>

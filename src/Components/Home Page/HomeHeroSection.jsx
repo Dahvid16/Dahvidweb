@@ -21,22 +21,23 @@ const HomeHeroSection = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mb-6"
             >
-              <span className="text-5xl sm:text-6xl">👋</span>
+              <span className="text-5xl font-bold sm:text-6xl">Hi there 👋</span>
             </motion.div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight">
-              Hi, I'm{' '}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              I'm{' '}
               <span className="bg-emerald-400/60 bg-clip-text text-transparent">
                 David Akpom
               </span>
             </h1>
             
-            <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-6 font-light">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-4 font-light">
               Frontend Developer
             </p>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              I craft websites that blend aesthetics, performance, and conversion.
+              Building modern web applications that drive growth. Specializing in fast, 
+              accessible, and conversion-focused web experiences.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center sm:items-center">

@@ -104,7 +104,7 @@ const HomeFeaturedPage = () => {
           >
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-primary-foreground rounded-2xl font-semibold shadow-emerald hover:shadow-emerald-lg transition-all duration-300 glow-hover"
+              className="inline-flex items-center gap-2 px-8 py-4 gradient-primary text-white/80 rounded-2xl font-semibold shadow-emerald hover:shadow-emerald-lg transition-all duration-300 glow-hover"
             >
               View All Projects
               <FaArrowRight className="w-4 h-4" />

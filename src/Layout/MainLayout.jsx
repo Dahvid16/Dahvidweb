@@ -9,7 +9,7 @@ const MainLayout = () => {
     <div className='flex flex-col md:flex-row w-full relative md:space-x-4'>
       <NavBar />
       <SideBar />
-      <main className="md:flex-1 overflow-y-auto p-5 bg-gray-200/50 mt-3">
+      <main className="md:flex-1 overflow-y-auto p-5 bg-gray-200/50 md:m-0 mt-3">
         <Outlet />
       </main>
     <Footer />

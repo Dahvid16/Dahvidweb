@@ -16,17 +16,18 @@ const HomeAboutSection = () => {
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Passionate About{' '}
               <span className="bg-emerald-400/60 bg-clip-text text-transparent">
-                Digital Experiences
+                Digital Experiences?
               </span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              With years of experience in frontend development, I specialize in creating 
-              beautiful, responsive, and user-friendly websites that help businesses grow 
-              and brands stand out in the digital space.
+              I am a Frontend developer, with a passion for React and modern web technologies. 
+              I blend clean code principles with creative UI/UX to transform ideas into exceptional digital experiences. 
+              From smooth animations to pixel-perfect interfaces, every project is an opportunity to push the boundaries 
+              of what's possible on the web. Let's build something remarkable together.
             </p>
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-primary-foreground rounded-2xl font-semibold shadow-emerald hover:shadow-emerald-lg transition-all duration-300 glow-hover"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl border border-border font-semibold shadow-emerald hover:shadow-emerald-lg transition-all duration-300 glow-hover"
             >
               Learn More About Me
               <FaArrowRight className="w-5 h-5" />

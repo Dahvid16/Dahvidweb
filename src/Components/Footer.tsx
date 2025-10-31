@@ -16,11 +16,8 @@ const Footer = () => {
   return (
     <footer className="block glassy text-primary-foreground px-5 py-16 md:py-20 md:hidden text-gray-800" style={{borderRadius: "50px 50px 0 0"}}>
       <div className="container-custom">
-
-          {/* Contact Information & Links */}
           <div className="space-y-8">
           
-            {/* Logo and Description */}
             <div>
               <Link to="/" className="flex items-center space-x-2 mb-4">
                 <div className="flex flex-col leading-tight">
@@ -30,8 +27,8 @@ const Footer = () => {
                   <p className='flex-nowrap text-lg tracking-widerr font-medium italic'>Frontend Developer</p>
                 </div>
               </Link>
-              <p className="text-body text-white/80">
-                Professional legal services with integrity, expertise, and dedication 
+              <p className="text-body">
+                Professional website creation with integrity, expertise, and dedication 
                 to serving our clients' best interests.
               </p>
             </div>
@@ -54,7 +51,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex flex-col gap-3">
               <h3 className="text-2xl font-bold mb-4">Connect on Social</h3>
-                <div className="grid grid-cols-3 w-[90%] gap-6 m-auto">
+                <div className="grid grid-cols-2 px-3 w-full gap-6">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
                     return (

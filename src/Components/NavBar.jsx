@@ -31,7 +31,7 @@ const NavBar = () => {
         <AnimatePresence>
         {isMenuOpen && (
         <>
-        <motion.ul className='absolute top-22 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[55%] items-center h-[90svh] pt-3 pb-5 px-4 shadow-md rounded-tl-4xl'
+        <motion.ul className='absolute top-22 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[60%] items-center h-[90svh] pt-3 pb-5 px-4 shadow-md rounded-tl-4xl'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -59,7 +59,7 @@ const NavBar = () => {
                         {item.name}
                     </NavLink>
                 ))}
-                <div className="w-full h-[2px] bg-gray-400"></div>
+                <div className="w-full h-[2px] bg-gray-400 mt-5"></div>
                 <div className="flex flex-row justify-center items-center text-center gap-2 flex-wrap">
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">

@@ -5,10 +5,12 @@ import NotFound from './Pages/NotFound'
 import MainLayout from './Layout/MainLayout'
 import Contact from './Pages/Contact'
 import HomePage from './Pages/HomePage'
+import ScrollToTop from './Components/ScrollToTop'
 
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />} >
           <Route index element={<HomePage />} />
