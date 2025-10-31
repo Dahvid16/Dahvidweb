@@ -60,7 +60,7 @@ const NavBar = () => {
                     </NavLink>
                 ))}
                 <div className="w-full h-[2px] bg-gray-400"></div>
-                <div className="flex flex-row justify-start items-center text-center gap-3">
+                <div className="flex flex-row justify-start items-center text-center gap-2">
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
                         <FaEnvelope className='text-lg text-gray-800' />
