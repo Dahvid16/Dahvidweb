@@ -14,7 +14,7 @@ const Footer = () => {
     ];
 
   return (
-    <footer className="block glassy text-primary-foreground px-5 py-16 md:py-20 md:hidden text-gray-800" style={{borderRadius: "50px 50px 0 0"}}>
+    <footer className="block glassy text-primary-foreground px-5 pt-16 pb-10 md:hidden text-gray-800" style={{borderRadius: "50px 50px 0 0"}}>
       <div className="container-custom">
           <div className="space-y-8">
           
@@ -51,7 +51,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex flex-col gap-3">
               <h3 className="text-2xl font-bold mb-4">Connect on Social</h3>
-                <div className="grid grid-cols-2 px-3 w-full gap-6">
+                <div className="grid grid-cols-2 px-3 gap-6">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
                     return (
@@ -60,7 +60,7 @@ const Footer = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
+                        className="flex items-center gap-3 px-4 py-3 bg-white/20 border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
                       >
                         <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                         <span className="font-medium text-sm">{social.label}</span>
