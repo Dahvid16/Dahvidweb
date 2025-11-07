@@ -2,13 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion' // eslint-disable-line no-unused-vars
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa6'
+import Typewriter from '../TypeWriterEffect'
 
 const HomeHeroSection = () => {
     return (
   <section 
-      className="md:min-h-[90svh] min-h-[80svh] flex items-center justify-center relative overflow-hidden"
+      className="lg:min-h-[90svh] min-h-[70svh] flex items-center justify-center relative overflow-hidden"
     > 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,12 +25,12 @@ const HomeHeroSection = () => {
               <span className="text-5xl font-bold sm:text-6xl">Hi there 👋</span>
             </motion.div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+            <p className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               I'm{' '}
               <span className="bg-emerald-400/60 bg-clip-text text-transparent">
-                David Akpom
+                <Typewriter text="AKPOM David" typingSpeed={150} deletingSpeed={75} pause={900} />
               </span>
-            </h1>
+            </p>
             
             <p className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground mb-4 font-light">
               Frontend Developer
@@ -51,9 +52,9 @@ const HomeHeroSection = () => {
               
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground rounded-2xl font-semibold border border-border hover:bg-sidebar-accent transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-secondary text-xl rounded-2xl font-semibold border border-border hover:bg-sidebar-accent transition-all duration-300"
               >
-                Let's Collaborate
+                Hire me
                 <FaArrowRight className="w-5 h-5" />
               </Link>
             </div>

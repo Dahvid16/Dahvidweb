@@ -2,7 +2,7 @@ import React from 'react'
 import { FaBriefcase, FaEnvelope, FaHouse, FaInstagram, FaLinkedin, FaPhone, FaXTwitter } from 'react-icons/fa6'
 import { IoNewspaper, IoPerson } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
-import Logo from '../assets/Images/Logo.png'
+import Profile from '../assets/Images/Profile_Pic.png'
 import { FaGithub } from 'react-icons/fa'
 
 const SideBar = () => {
@@ -27,10 +27,10 @@ const SideBar = () => {
   // const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className='hidden md:flex flex-col glassy sticky top-0 px-6 py-8 overflow-y-auto text-center m-2 h-screen'>
+    <nav className='hidden md:flex flex-col glassy sticky top-0 px-6 py-8 md:py-14 lg:p-6 overflow-y-auto text-center m-2 h-screen md:h-[85svh] md:rounded-2xl lg:rounded-none lg:h-screen md:scroll-auto'>
       <div className='flex flex-col gap-5'>
-        <picture className='bg-gray-300/60 h-20 w-20 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
-          <img src={Logo} alt="Dahvidweb Logo" />
+        <picture className=''>
+          <img src={Profile} alt="Dahvidweb Logo" className='h-26 w-26 rounded-3xl flex items-center justify-center mx-auto shadow-md border-2 border-gray-300' />
         </picture>
         <div>
           <h1 className="text-gray-800 font-bold text-xl">AKPOM David Ikenna</h1>
@@ -43,7 +43,7 @@ const SideBar = () => {
                 <NavLink
                 key={item.name}
                 to={item.path}
-                className={({isActive}) => `flex items-center gap-3 w-full px-3 py-2 text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/25 text-white' : 'text-gray-800'}`}>
+                className={({isActive}) => `flex items-center gap-3 w-full px-3 py-2 text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/25 text-white' : 'text-gray-800 navHover'}`}>
                   <span className='text-lg'>{item.icon}</span>
                   {item.name}
                 </NavLink>
@@ -51,7 +51,7 @@ const SideBar = () => {
           </ul>
         </div>
         <div className="w-full h-1 bg-gray-400 mt-6"></div>
-        <div className="flex flex-row justify-start items-center text-center gap-3">
+        <div className="flex flex-row justify-center items-center text-center gap-3">
             {socialLinks.map((social) => {
             const Icon = social.icon;
             return (

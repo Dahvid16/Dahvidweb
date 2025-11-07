@@ -2,7 +2,6 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import SideBar from '../Components/SideBar'
 import NavBar from '../Components/NavBar'
-import Footer from '../Components/Footer'
 
 const MainLayout = () => {
   return (
@@ -14,7 +13,6 @@ const MainLayout = () => {
       <main className="md:flex-1 md:rounded-none rounded-t-4xl overflow-y-auto p-5 bg-gray-200/50 md:m-0 mt-3">
         <Outlet />
       </main>
-    <Footer />
     </div>
   )
 }

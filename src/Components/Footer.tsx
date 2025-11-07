@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {} from 'react-icons'
 import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin, FaMapMarker, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -27,10 +26,6 @@ const Footer = () => {
                   <p className='flex-nowrap text-lg tracking-widerr font-medium italic'>Frontend Developer</p>
                 </div>
               </Link>
-              <p className="text-body">
-                Professional website creation with integrity, expertise, and dedication 
-                to serving our clients' best interests.
-              </p>
             </div>
             {/* Contact Details */}
             <div className="space-y-3">
@@ -51,7 +46,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex flex-col gap-3">
               <h3 className="text-2xl font-bold mb-4">Connect on Social</h3>
-                <div className="grid grid-cols-2 px-3 gap-6">
+                <div className="grid grid-cols-2 px-2 gap-4">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
                     return (
@@ -60,9 +55,9 @@ const Footer = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 px-4 py-3 bg-white/20 border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
+                        className="flex items-center gap-[0.6rem] px-3 py-2 bg-white/20 border border-border rounded-xl hover:border-primary/50 hover:bg-gradient-glow transition-all duration-300 group"
                       >
-                        <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <Icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
                         <span className="font-medium text-sm">{social.label}</span>
                       </a>
                     );
@@ -73,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-grey/20 mt-12 pt-6 text-center">
+        <div className="border-t border-grey/20 mt-10 pt-4 text-center">
           <p className="text-grey/70">
             © 2025 Dahvidweb. All rights reserved. Privacy Policy | Terms of Service
           </p>

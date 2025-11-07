@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { FaTimes } from 'react-icons/fa';
 import { FaBars } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
 import { FaEnvelope, FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6'
 import { FaGithub } from 'react-icons/fa'
+import Profile from '../assets/Images/Profile_Pic.png'
 import Logo from '../assets/Images/Logo.png'
 
 const NavBar = () => {
@@ -23,15 +24,21 @@ const NavBar = () => {
       ];
 
   return (
-    <nav className='md:hidden flex flex-row glassy justify-between px-6 py-4 shadow-md items-center z-50 sticky top-2 w-[95%] rounded-4xl m-auto'>
-        <h1 className='text-[2rem] font-bold'>Dahvidweb</h1>
+    <nav className='md:hidden flex flex-row glassy justify-between px-6 py-3 shadow-md items-center z-50 sticky top-2 w-[95%] rounded-4xl m-auto'>
+        <Link to='/' className='flex items-center gap-1'>
+        <picture>
+            <img src={Logo} alt="Logo" className='w-9 h-9' />
+        </picture>
+            <h1 className='text-[1.9rem] font-bold tracking-tighter'>Dahvidweb</h1>
+        </Link>
         <div className="text-2xl cursor-pointer" onClick={open}>
             {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
         <AnimatePresence>
         {isMenuOpen && (
         <>
-        <motion.ul className='absolute top-22 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[60%] items-center h-[90svh] pt-3 pb-5 px-4 shadow-md rounded-tl-4xl'
+        <div className="absolute top-20 left-0 h-[90svh] w-full z-0 bg-white/60" onClick={open}></div>
+        <motion.ul className='absolute top-20 bg-linear-to-l from-emerald-200 to-emerald-100 left-0 w-[60%] items-center h-[90svh] pt-3 pb-5 px-4 shadow-md rounded-tl-4xl'
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
@@ -39,11 +46,11 @@ const NavBar = () => {
         >
             <div className="flex flex-col space-y-2 items-center">
                 <div className='flex flex-col gap-5 w-full'>
-                    <picture className='bg-gray-300/60 h-20 w-20 rounded-3xl flex items-center justify-center mx-auto shadow-md'>
-                        <img src={Logo} alt="Dahvidweb Logo" />
-                    </picture>
+                    <picture className=''>
+                        <img src={Profile} alt="Dahvidweb Logo" className='h-20 w-20 rounded-3xl flex items-center justify-center mx-auto shadow-md border-2 border-gray-300' />
+                            </picture>
                     <div className='text-center'>
-                    <h1 className="text-gray-800 font-bold text-xl">AKPOM David Ikenna</h1>
+                    <h1 className="text-gray-800 font-bold text-2xl">AKPOM David Ikenna</h1>
                     <h4 className='font-medium mt-3'>Frontend Developer</h4>
                     <p></p>
                     </div>
@@ -54,12 +61,12 @@ const NavBar = () => {
                     <NavLink
                     key={item.name}
                     to={item.path}
-                    className={({isActive}) => `flex items-center justify-center gap-3 px-3 py-2 w-full text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/35 text-white' : 'text-gray-800'}`}
+                    className={({isActive}) => `flex items-center justify-center gap-3 px-3 py-2 w-full text-lg rounded-2xl font-medium ${isActive ? 'bg-emerald-700/35 text-white' : 'text-gray-800 navHover'}`}
                     onClick={open}>
                         {item.name}
                     </NavLink>
                 ))}
-                <div className="w-full h-[2px] bg-gray-400 mt-5"></div>
+                <div className="w-full h-0.5 bg-gray-400 mt-2"></div>
                 <div className="flex flex-row justify-center items-center text-center gap-2 flex-wrap">
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
                     <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">

@@ -111,3 +111,35 @@ html, body, #root {
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
+
+.navHover:hover {
+  background: rgba(164, 244, 207, 0.7);
+  color: rgba(30, 41, 57, 0.7);
+}
+
+.smooth-typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  border-right: 2px solid;
+  animation: blink 0.7s step-start infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 50%, 100% {
+    border-color: #333333;
+  }
+  25%, 75% {
+    border-color: transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: linear-gradient(to right, rgba(164, 244, 207, 0.8), rgba(208, 250, 229, 1));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in oklab, var(--color-emerald-700)  35%, transparent);
+  border-radius: 4px;
+}
