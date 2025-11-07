@@ -3,9 +3,9 @@ import { FaEnvelope, FaGithub, FaGlobe, FaInstagram, FaLinkedin, FaXTwitter } fr
 import Profile from '../assets/Images/Profile_Pic.png'
 import { toast } from 'react-toastify';
 import { BsPersonVcard } from 'react-icons/bs';
-import Contra from '../assets/Images/contra.png';
-import Upwork from '../assets/Images/upwork.png';
-import Fiverr from '../assets/Images/fiverr.png';
+import Contra from '../assets/Images/Contra.png';
+import Upwork from '../assets/Images/Upwork.png';
+import Fiverr from '../assets/Images/Fiverr.png';
 import PageTransition from '../PageTransition';
 
 const Links = () => {
