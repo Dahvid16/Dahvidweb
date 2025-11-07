@@ -51,13 +51,13 @@ const Links = () => {
                 {majorLinks.map((major) => {
                     const Icon = major.icon;
                     return (
-                        <a href={major.href} key={major.name} className='flex gap-3 w-[90%] md:w-[80%] lg:w-[60%] items-center px-8 py-4 rounded-4xl glassy space-x-10 md:space-x-4 lg:space-x-24' onClick={major.onClick} >
+                        <a href={major.href} key={major.name} className='flex gap-3 w-[95%] md:w-[80%] lg:w-[60%] items-center px-6 py-4 rounded-4xl glassy space-x-3 md:space-x-4 lg:space-x-24' onClick={major.onClick} >
                             {major.icon ? (
-                                <major.icon size={35} />
+                                <major.icon size={30} />
                             ) : (
-                                <img src={major.image} alt={major.name} style={{ width: 45, height: 45 }} />
+                                <img src={major.image} alt={major.name} style={{ width: 40, height: 40 }} />
                             )}
-                            <p className='text-lg font-semibold text-gray-800/80'>{major.label}</p>
+                            <p className='text-[1.1rem] font-semibold text-gray-800/80'>{major.label}</p>
                         </a>
                     )
                 }) }
