@@ -6,6 +6,7 @@ import { BsPersonVcard } from 'react-icons/bs';
 import Contra from '../assets/Images/contra.png';
 import Upwork from '../assets/Images/upwork.png';
 import Fiverr from '../assets/Images/fiverr.png';
+import PageTransition from '../PageTransition';
 
 const Links = () => {
 
@@ -33,6 +34,8 @@ const Links = () => {
     ]
 
   return (
+    <>
+    <PageTransition>
     <section className='container px-4 sm:px-6 lg:px-8 py-6'>
         <div className='min-h-[70svh] flex flex-col items-center space-y-10'>
             <div className="flex flex-col items-center text-center gap-5">
@@ -67,6 +70,8 @@ const Links = () => {
           </p>
         </footer>
     </section>
+    </PageTransition>
+    </>
   )
 }
 
