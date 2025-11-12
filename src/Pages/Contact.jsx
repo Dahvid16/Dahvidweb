@@ -93,8 +93,8 @@ const Contact = () => {
                 <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
                 
                 {isSubmitted ? (
-                <div className="text-center bg-green-50 border-green-200">
-                  <FaCheckCircle className="h-16 w-16 text-green-600 mx-auto mb-4" />
+                <div className="text-center border-green-200">
+                  <FaCheckCircle className="h-16 w-16 text-green-600/70 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-2">
                     Message Sent Successfully!
                   </h3>

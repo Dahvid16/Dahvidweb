@@ -5,8 +5,8 @@ import { FaArrowRight } from 'react-icons/fa';
 const HomeAboutSection = () => {  
   return (
     <>
-      <section className="py-16 px-4 sm:px-6 lg:px-8 backdrop-blur-sm">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="backdrop-blur-sm border-1 rounded-2xl flex px-4 sm:px-6 lg:px-6">
+        <div className="container py-10 mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,6 +33,9 @@ const HomeAboutSection = () => {
               <FaArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
+        </div>
+        <div className="">
+          <p>David</p>
         </div>
       </section>
     </>

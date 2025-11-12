@@ -9,7 +9,7 @@ const Footer = () => {
       { href: 'https://www.linkedin.com/in/davidakpom', icon: FaLinkedin, label: 'LinkedIn' },
       { href: 'https://instagram.com/dahvidweb', icon: FaInstagram, label: 'Instagram' },
       { href: 'https://x.com/dahv_id16', icon: FaXTwitter, label: 'X' },
-      { href: 'https://wa.me/2348162016410?text=Good%20Day%20Sir.%20I%20got%20your%20number%20from%20your%20website.%20I..', icon: FaWhatsapp, label: 'WhatsApp' },
+      { href: 'https://wa.me/2348162016410?text=Good%20Day.%20I%20got%20your%20number%20from%20your%20website.%20I..', icon: FaWhatsapp, label: 'WhatsApp' },
     ];
 
   return (

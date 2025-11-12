@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaTimes } from 'react-icons/fa';
-import { FaBars } from 'react-icons/fa6';
+import { FaBars, FaWhatsapp } from 'react-icons/fa6';
 import { Link, NavLink } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
@@ -69,8 +69,8 @@ const NavBar = () => {
                 <div className="w-full h-0.5 bg-gray-400 mt-2"></div>
                 <div className="flex flex-row justify-center items-center text-center gap-2 flex-wrap">
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
-                    <a href="mailto:dahvidweb@gmail.com" target="_blank" rel="noreferrer">
-                        <FaEnvelope className='text-lg text-gray-800' />
+                    <a href='https://wa.me/2348162016410?text=Good%20Day.%20I%20got%20your%20number%20from%20your%20website.%20I..' target="_blank" rel="noreferrer">
+                        <FaWhatsapp className='text-lg text-gray-800' />
                     </a>
                 </div>
                 <div className='bg-gray-300/60 p-2 rounded-lg cursor-pointer shadow-md'>
